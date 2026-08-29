@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["pages-setting-areas"],{"682b":function(e,n,t){"use strict";var a;t.r(n);var r,s=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("v-uni-view")},u=[],c={data:function(){return{}}},i=c,o=t("f0c5"),l=Object(o["a"])(i,s,u,!1,null,"18eb0a64",null,!1,a,r);n["default"]=l.exports}}]);
