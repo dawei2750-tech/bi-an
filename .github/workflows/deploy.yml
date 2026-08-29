@@ -10,19 +10,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup Node 16
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 16
-      - name: Install dependencies
-        run: cd frontend && npm install --legacy-peer-deps --ignore-scripts
-      - name: Build
-        run: cd frontend && npm run build:h5
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      - run: cd frontend && npm install --legacy-peer-deps --ignore-scripts
+      - run: cd frontend && npm run build:h5
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./frontend/dist/build/h5
   deploy:
@@ -32,6 +27,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+      - id: deployment
+        uses: actions/deploy-pages@v4
