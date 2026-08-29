@@ -127,25 +127,26 @@
         "usingComponents" : true,
         "appid" : ""
     },
-    "h5" : {
-        "template" : "template.h5.html",
-        "router" : {
-            "mode" : "hash",
-            "base" : "/h5/"
-        },
-        "optimization" : {
-            "treeShaking" : {
-                "enable" : true
-            }
-        },
-        "title" : "Webull",
-        "sdkConfigs" : {
-            "maps" : {}
-        },
-        "devServer" : {
-            "https" : true
+    "h5": {
+    "template": "template.h5.html",
+    "router": {
+        "mode": "hash",
+        "base": "/bi-an/"
+    },
+    "publicPath": "/bi-an/",
+    "optimization": {
+        "treeShaking": {
+            "enable": true
         }
+    },
+    "title": "黑先生交易所",
+    "sdkConfigs": {
+        "maps": {}
+    },
+    "devServer": {
+        "https": true
     }
+}
 }
 // ,"disableHostCheck" : true,
 // "proxy" : {
